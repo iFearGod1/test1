@@ -6,13 +6,16 @@
   <title>Jefetab Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- ENTER SCREEN -->
   <div class="intro" id="intro" aria-hidden="false">
     <div class="intro-inner">
       <button class="enter-btn" id="enter-btn" type="button" aria-label="Enter">Enter</button>
     </div>
   </div>
 
+  <!-- MAIN APP -->
   <div class="app" id="app" aria-hidden="true">
     <nav class="navbar">
       <div class="nav-inner">
@@ -24,6 +27,7 @@
       </div>
     </nav>
 
+    <!-- HOME -->
     <section id="home" class="section">
       <div class="panel weather-panel">
         <div class="weather-card" aria-live="polite">
@@ -37,144 +41,124 @@
       </div>
     </section>
 
+    <!-- ODDS -->
     <section id="odds" class="section">
       <div class="panel odds-panel">
         <div class="section-head">
           <h2>Live Odds</h2>
           <p>Select a sport to load current lines from your API.</p>
         </div>
+
         <div class="odds-body" id="oddsPanel" aria-live="polite">
           <select id="sportSelect">
+            <option value="americanfootball_nfl" selected>NFL</option>
             <option value="basketball_nba">NBA</option>
-            <option value="americanfootball_nfl">NFL</option>
             <option value="americanfootball_ncaaf">NCAAF</option>
             <option value="baseball_mlb">MLB</option>
             <option value="icehockey_nhl">NHL</option>
             <option value="mma_mixed">UFC</option>
           </select>
-          <div id="oddsContainer"></div>
+
+          <div id="oddsContainer">
+            <div class="odds-widget-wrap">
+              <iframe
+                title="Sports Odds Widget"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                class="odds-iframe"
+                src="https://widget.the-odds-api.com/v1/sports/americanfootball_nfl/events/?accessKey=wk_6988473aa35808c52396ceeaec2c38d0&bookmakerKeys=fanduel&oddsFormat=american&markets=h2h%2Cspreads%2Ctotals&marketNames=h2h%3AMoneyline%2Cspreads%3ASpreads%2Ctotals%3AOver%2FUnder"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-  <section id="sites" class="section">
-    <div class="panel">
-      <div class="section-head">
-        <h2>Top Sites</h2>
-        <p>Add or remove by duplicating a card in the HTML.</p>
-      </div>
-      <div class="grid">
-        <a class="card" href="https://www.twitch.tv" target="_blank" rel="noreferrer">
-          <span class="card-title">Twitch</span>
-          <span class="card-sub">Streams and creators</span>
-        </a>
-        <a class="card" href="https://www.youtube.com" target="_blank" rel="noreferrer">
-          <span class="card-title">YouTube</span>
-          <span class="card-sub">Tutorials and demos</span>
-        </a>
-        <a class="card" href="https://gemini.google.com" target="_blank" rel="noreferrer">
-          <span class="card-title">Gemini</span>
-          <span class="card-sub">Google AI chat</span>
-        </a>
-        <a class="card" href="https://www.google.com" target="_blank" rel="noreferrer">
-          <span class="card-title">Google</span>
-          <span class="card-sub">Search and tools</span>
-        </a>
-        <a class="card" href="https://chatgpt.com" target="_blank" rel="noreferrer">
-          <span class="card-title">ChatGPT</span>
-          <span class="card-sub">Brainstorming help</span>
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- TOP SITES -->
+    <section id="sites" class="section">
+      <div class="panel">
+        <div class="section-head">
+          <h2>Top Sites</h2>
+          <p>Add or remove by duplicating a card in the HTML.</p>
+        </div>
 
-  <section id="learning" class="section">
-    <div class="panel">
-      <div class="section-head">
-        <h2>Learning Queue</h2>
-        <p>Pick one small win today and log it here.</p>
-      </div>
-      <div class="list">
-        <div class="list-item">
-          <span class="list-title">Build a simple layout</span>
-          <span class="tag">Today</span>
-        </div>
-        <div class="list-item">
-          <span class="list-title">Practice flexbox + grid</span>
-          <span class="tag">This week</span>
-        </div>
-        <div class="list-item">
-          <span class="list-title">Write a tiny JS feature</span>
-          <span class="tag">Next</span>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="grid">
+          <a class="card" href="https://www.twitch.tv" target="_blank" rel="noreferrer">
+            <span class="card-title">Twitch</span>
+            <span class="card-sub">Streams and creators</span>
+          </a>
 
+          <a class="card" href="https://www.youtube.com" target="_blank" rel="noreferrer">
+            <span class="card-title">YouTube</span>
+            <span class="card-sub">Tutorials and demos</span>
+          </a>
+
+          <a class="card" href="https://gemini.google.com" target="_blank" rel="noreferrer">
+            <span class="card-title">Gemini</span>
+            <span class="card-sub">Google AI chat</span>
+          </a>
+
+          <a class="card" href="https://www.google.com" target="_blank" rel="noreferrer">
+            <span class="card-title">Google</span>
+            <span class="card-sub">Search and tools</span>
+          </a>
+
+          <a class="card" href="https://chatgpt.com" target="_blank" rel="noreferrer">
+            <span class="card-title">ChatGPT</span>
+            <span class="card-sub">Brainstorming help</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING -->
+    <section id="learning" class="section">
+      <div class="panel">
+        <div class="section-head">
+          <h2>Learning Queue</h2>
+          <p>Pick one small win today and log it here.</p>
+        </div>
+
+        <div class="list">
+          <div class="list-item">
+            <span class="list-title">Build a simple layout</span>
+            <span class="tag">Today</span>
+          </div>
+          <div class="list-item">
+            <span class="list-title">Practice flexbox + grid</span>
+            <span class="tag">This week</span>
+          </div>
+          <div class="list-item">
+            <span class="list-title">Write a tiny JS feature</span>
+            <span class="tag">Next</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTES -->
     <section id="notes" class="section">
       <div class="panel">
         <div class="section-head">
           <h2>Notes</h2>
-        <p>Keep reminders, ideas, and micro-goals.</p>
-      </div>
-      <div class="notes">
-        <div class="note">
-          <h3>Idea</h3>
-          <p>Add a weather widget later with a simple API.</p>
+          <p>Keep reminders, ideas, and micro-goals.</p>
         </div>
-        <div class="note">
-          <h3>Experiment</h3>
-          <p>Try a new color accent or change the background position.</p>
-        </div>
+
+        <div class="notes">
+          <div class="note">
+            <h3>Idea</h3>
+            <p>Add a weather widget later with a simple API.</p>
+          </div>
+          <div class="note">
+            <h3>Experiment</h3>
+            <p>Try a new color accent or change the background position.</p>
+          </div>
         </div>
       </div>
     </section>
   </div>
 
-  <script>
-    const weatherTemp = document.getElementById("weather-temp");
-    const weatherMeta = document.getElementById("weather-meta");
-    const enterBtn = document.getElementById("enter-btn");
-    const intro = document.getElementById("intro");
-    const app = document.getElementById("app");
-
-    const formatTempF = (c) => Math.round((c * 9) / 5 + 32);
-
-    const fetchWeather = async (lat, lon) => {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m&temperature_unit=celsius&wind_speed_unit=mph`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("Weather request failed");
-      return res.json();
-    };
-
-    const updateWeather = async (lat, lon, label) => {
-      const data = await fetchWeather(lat, lon);
-      const tempC = data.current.temperature_2m;
-      const wind = data.current.wind_speed_10m;
-      weatherTemp.textContent = formatTempF(tempC);
-      weatherMeta.textContent = `${label} • Wind ${Math.round(wind)} mph`;
-    };
-
-    const fallback = () => updateWeather(34.0522, -118.2437, "Los Angeles");
-
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          updateWeather(pos.coords.latitude, pos.coords.longitude, "Your area")
-            .catch(fallback);
-        },
-        () => fallback()
-      );
-    } else {
-      fallback();
-    }
-
-    enterBtn.addEventListener("click", () => {
-      document.body.classList.add("is-entered");
-      intro.setAttribute("aria-hidden", "true");
-      app.setAttribute("aria-hidden", "false");
-    });
-  </script>
+  <!-- Your JS -->
   <script src="main.js"></script>
 </body>
 </html>
