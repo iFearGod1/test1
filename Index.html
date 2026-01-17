@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jefetab Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="intro" id="intro" aria-hidden="false">
+    <div class="intro-inner">
+      <button class="enter-btn" id="enter-btn" type="button" aria-label="Enter">Enter</button>
+    </div>
+  </div>
+
+  <div class="app" id="app" aria-hidden="true">
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="#home">Home</a>
+        <a href="#picks">Picks</a>
+        <a href="#sites">Top Sites</a>
+        <a href="#learning">Learning</a>
+        <a href="#notes">Notes</a>
+      </div>
+    </nav>
+
+    <section id="home" class="section">
+      <div class="panel weather-panel">
+        <div class="weather-card" aria-live="polite">
+          <p class="weather-kicker">Weather</p>
+          <div class="weather-main">
+            <span class="weather-temp" id="weather-temp">--</span>
+            <span class="weather-unit">F</span>
+          </div>
+          <p class="weather-meta" id="weather-meta">Loading local forecast...</p>
+        </div>
+      </div>
+    </section>
+
+  <section id="picks" class="section">
+    <div class="panel">
+      <div class="section-head">
+        <h2>Rider Bets</h2>
+        <p>Popular same-game parlays and multi-leg promos.</p>
+      </div>
+      <div class="rider-grid">
+        <div class="rider-card">
+          <div class="rider-head">
+            <span class="rider-book">FanDuel</span>
+            <span class="rider-badge">SGP</span>
+          </div>
+          <div class="rider-matchup">WAS Wizards @ SAC Kings</div>
+          <div class="rider-meta">Starts in 7 hours</div>
+          <div class="rider-legs">
+            <div class="rider-leg">
+              <span class="rider-leg-name">Tre Johnson Over 21.5</span>
+              <span class="rider-leg-sub">PTS + REB + AST</span>
+            </div>
+            <div class="rider-leg">
+              <span class="rider-leg-name">Kyshawn George Over 26.5</span>
+              <span class="rider-leg-sub">PTS + REB + AST</span>
+            </div>
+            <div class="rider-leg">
+              <span class="rider-leg-name">Domantas Sabonis Over 27.5</span>
+              <span class="rider-leg-sub">PTS + REB + AST</span>
+            </div>
+          </div>
+          <div class="rider-foot">
+            <span class="rider-placed">146 people placed</span>
+            <span class="rider-odds">+1225</span>
+          </div>
+          <div class="rider-payout">$10 wager wins $122.51</div>
+        </div>
+
+        <div class="rider-card">
+          <div class="rider-head">
+            <span class="rider-book">DraftKings</span>
+            <span class="rider-badge">Parlay</span>
+          </div>
+          <div class="rider-matchup">Double Trouble</div>
+          <div class="rider-meta">All players 15+ double-doubles</div>
+          <div class="rider-legs">
+            <div class="rider-leg">
+              <span class="rider-leg-name">Evan Mobley Double-Double</span>
+              <span class="rider-leg-sub">REB + PTS</span>
+            </div>
+            <div class="rider-leg">
+              <span class="rider-leg-name">Nikola Vucevic Double-Double</span>
+              <span class="rider-leg-sub">REB + PTS</span>
+            </div>
+            <div class="rider-leg">
+              <span class="rider-leg-name">Alperen Sengun Double-Double</span>
+              <span class="rider-leg-sub">REB + PTS</span>
+            </div>
+          </div>
+          <div class="rider-foot">
+            <span class="rider-placed">386 people placed</span>
+            <span class="rider-odds">+1272</span>
+          </div>
+          <div class="rider-payout">$10 pays $137</div>
+        </div>
+
+        <div class="rider-card">
+          <div class="rider-head">
+            <span class="rider-book">DraftKings</span>
+            <span class="rider-badge">SGP</span>
+          </div>
+          <div class="rider-matchup">Pure Scorers</div>
+          <div class="rider-meta">PTS per game leaders</div>
+          <div class="rider-legs">
+            <div class="rider-leg">
+              <span class="rider-leg-name">Tyrese Maxey 25+</span>
+              <span class="rider-leg-sub">Points</span>
+            </div>
+            <div class="rider-leg">
+              <span class="rider-leg-name">Donovan Mitchell 25+</span>
+              <span class="rider-leg-sub">Points</span>
+            </div>
+            <div class="rider-leg">
+              <span class="rider-leg-name">Kevin Durant 25+</span>
+              <span class="rider-leg-sub">Points</span>
+            </div>
+          </div>
+          <div class="rider-foot">
+            <span class="rider-placed">221 people placed</span>
+            <span class="rider-odds">+772</span>
+          </div>
+          <div class="rider-payout">$10 pays $87</div>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <h3>Main Event Games</h3>
+        <p>Highlight matchups for today.</p>
+      </div>
+      <div class="games-grid">
+        <div class="game-card">
+          <span class="game-title">Lakers vs Warriors</span>
+          <span class="game-meta">NBA • 10:00 PM</span>
+        </div>
+        <div class="game-card">
+          <span class="game-title">Yankees vs Red Sox</span>
+          <span class="game-meta">MLB • 7:05 PM</span>
+        </div>
+        <div class="game-card">
+          <span class="game-title">Cowboys vs Eagles</span>
+          <span class="game-meta">NFL • 8:20 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sites" class="section">
+    <div class="panel">
+      <div class="section-head">
+        <h2>Top Sites</h2>
+        <p>Add or remove by duplicating a card in the HTML.</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://www.twitch.tv" target="_blank" rel="noreferrer">
+          <span class="card-title">Twitch</span>
+          <span class="card-sub">Streams and creators</span>
+        </a>
+        <a class="card" href="https://www.youtube.com" target="_blank" rel="noreferrer">
+          <span class="card-title">YouTube</span>
+          <span class="card-sub">Tutorials and demos</span>
+        </a>
+        <a class="card" href="https://gemini.google.com" target="_blank" rel="noreferrer">
+          <span class="card-title">Gemini</span>
+          <span class="card-sub">Google AI chat</span>
+        </a>
+        <a class="card" href="https://www.google.com" target="_blank" rel="noreferrer">
+          <span class="card-title">Google</span>
+          <span class="card-sub">Search and tools</span>
+        </a>
+        <a class="card" href="https://chatgpt.com" target="_blank" rel="noreferrer">
+          <span class="card-title">ChatGPT</span>
+          <span class="card-sub">Brainstorming help</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="learning" class="section">
+    <div class="panel">
+      <div class="section-head">
+        <h2>Learning Queue</h2>
+        <p>Pick one small win today and log it here.</p>
+      </div>
+      <div class="list">
+        <div class="list-item">
+          <span class="list-title">Build a simple layout</span>
+          <span class="tag">Today</span>
+        </div>
+        <div class="list-item">
+          <span class="list-title">Practice flexbox + grid</span>
+          <span class="tag">This week</span>
+        </div>
+        <div class="list-item">
+          <span class="list-title">Write a tiny JS feature</span>
+          <span class="tag">Next</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="notes" class="section">
+      <div class="panel">
+        <div class="section-head">
+          <h2>Notes</h2>
+        <p>Keep reminders, ideas, and micro-goals.</p>
+      </div>
+      <div class="notes">
+        <div class="note">
+          <h3>Idea</h3>
+          <p>Add a weather widget later with a simple API.</p>
+        </div>
+        <div class="note">
+          <h3>Experiment</h3>
+          <p>Try a new color accent or change the background position.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const weatherTemp = document.getElementById("weather-temp");
+    const weatherMeta = document.getElementById("weather-meta");
+    const enterBtn = document.getElementById("enter-btn");
+    const intro = document.getElementById("intro");
+    const app = document.getElementById("app");
+
+    const formatTempF = (c) => Math.round((c * 9) / 5 + 32);
+
+    const fetchWeather = async (lat, lon) => {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m&temperature_unit=celsius&wind_speed_unit=mph`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Weather request failed");
+      return res.json();
+    };
+
+    const updateWeather = async (lat, lon, label) => {
+      const data = await fetchWeather(lat, lon);
+      const tempC = data.current.temperature_2m;
+      const wind = data.current.wind_speed_10m;
+      weatherTemp.textContent = formatTempF(tempC);
+      weatherMeta.textContent = `${label} • Wind ${Math.round(wind)} mph`;
+    };
+
+    const fallback = () => updateWeather(34.0522, -118.2437, "Los Angeles");
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          updateWeather(pos.coords.latitude, pos.coords.longitude, "Your area")
+            .catch(fallback);
+        },
+        () => fallback()
+      );
+    } else {
+      fallback();
+    }
+
+    enterBtn.addEventListener("click", () => {
+      document.body.classList.add("is-entered");
+      intro.setAttribute("aria-hidden", "true");
+      app.setAttribute("aria-hidden", "false");
+    });
+  </script>
+</body>
+</html>
