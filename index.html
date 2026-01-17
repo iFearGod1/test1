@@ -40,96 +40,6 @@
 
   <section id="picks" class="section">
     <div class="panel">
-      <div class="section-head">
-        <h2>Rider Bets</h2>
-        <p>Popular same-game parlays and multi-leg promos.</p>
-      </div>
-      <div class="rider-grid">
-        <div class="rider-card">
-          <div class="rider-head">
-            <span class="rider-book">FanDuel</span>
-            <span class="rider-badge">SGP</span>
-          </div>
-          <div class="rider-matchup">WAS Wizards @ SAC Kings</div>
-          <div class="rider-meta">Starts in 7 hours</div>
-          <div class="rider-legs">
-            <div class="rider-leg">
-              <span class="rider-leg-name">Tre Johnson Over 21.5</span>
-              <span class="rider-leg-sub">PTS + REB + AST</span>
-            </div>
-            <div class="rider-leg">
-              <span class="rider-leg-name">Kyshawn George Over 26.5</span>
-              <span class="rider-leg-sub">PTS + REB + AST</span>
-            </div>
-            <div class="rider-leg">
-              <span class="rider-leg-name">Domantas Sabonis Over 27.5</span>
-              <span class="rider-leg-sub">PTS + REB + AST</span>
-            </div>
-          </div>
-          <div class="rider-foot">
-            <span class="rider-placed">146 people placed</span>
-            <span class="rider-odds">+1225</span>
-          </div>
-          <div class="rider-payout">$10 wager wins $122.51</div>
-        </div>
-
-        <div class="rider-card">
-          <div class="rider-head">
-            <span class="rider-book">DraftKings</span>
-            <span class="rider-badge">Parlay</span>
-          </div>
-          <div class="rider-matchup">Double Trouble</div>
-          <div class="rider-meta">All players 15+ double-doubles</div>
-          <div class="rider-legs">
-            <div class="rider-leg">
-              <span class="rider-leg-name">Evan Mobley Double-Double</span>
-              <span class="rider-leg-sub">REB + PTS</span>
-            </div>
-            <div class="rider-leg">
-              <span class="rider-leg-name">Nikola Vucevic Double-Double</span>
-              <span class="rider-leg-sub">REB + PTS</span>
-            </div>
-            <div class="rider-leg">
-              <span class="rider-leg-name">Alperen Sengun Double-Double</span>
-              <span class="rider-leg-sub">REB + PTS</span>
-            </div>
-          </div>
-          <div class="rider-foot">
-            <span class="rider-placed">386 people placed</span>
-            <span class="rider-odds">+1272</span>
-          </div>
-          <div class="rider-payout">$10 pays $137</div>
-        </div>
-
-        <div class="rider-card">
-          <div class="rider-head">
-            <span class="rider-book">DraftKings</span>
-            <span class="rider-badge">SGP</span>
-          </div>
-          <div class="rider-matchup">Pure Scorers</div>
-          <div class="rider-meta">PTS per game leaders</div>
-          <div class="rider-legs">
-            <div class="rider-leg">
-              <span class="rider-leg-name">Tyrese Maxey 25+</span>
-              <span class="rider-leg-sub">Points</span>
-            </div>
-            <div class="rider-leg">
-              <span class="rider-leg-name">Donovan Mitchell 25+</span>
-              <span class="rider-leg-sub">Points</span>
-            </div>
-            <div class="rider-leg">
-              <span class="rider-leg-name">Kevin Durant 25+</span>
-              <span class="rider-leg-sub">Points</span>
-            </div>
-          </div>
-          <div class="rider-foot">
-            <span class="rider-placed">221 people placed</span>
-            <span class="rider-odds">+772</span>
-          </div>
-          <div class="rider-payout">$10 pays $87</div>
-        </div>
-      </div>
-
       <div class="subhead">
         <h3>Main Event Games</h3>
         <p>Highlight matchups for today.</p>
@@ -160,7 +70,17 @@
       <div class="odds-overlay" id="overlay">
         <button class="odds-btn" type="button">Load Odds</button>
       </div>
-      <div class="odds-body" id="oddsPanel" aria-live="polite"></div>
+      <div class="odds-body" id="oddsPanel" aria-live="polite">
+        <select id="sportSelect">
+          <option value="basketball_nba">NBA</option>
+          <option value="americanfootball_nfl">NFL</option>
+          <option value="americanfootball_ncaaf">NCAAF</option>
+          <option value="baseball_mlb">MLB</option>
+          <option value="icehockey_nhl">NHL</option>
+          <option value="mma_mixed">UFC</option>
+        </select>
+        <div id="oddsContainer"></div>
+      </div>
     </div>
   </section>
 
