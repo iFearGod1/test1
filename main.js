@@ -1,16 +1,13 @@
-const select = document.getElementById("sportSelect");
+const intro = document.getElementById("intro");
+const app = document.getElementById("app");
+const enterBtn = document.getElementById("enter-btn");
 
-if (select) {
-  select.addEventListener("change", () => {
-    loadOdds(select.value);
-  });
-}
+enterBtn.addEventListener("click", () => {
+  // Hide intro + stop it from blocking clicks
+  intro.setAttribute("aria-hidden", "true");
+  intro.style.display = "none";
+  intro.style.pointerEvents = "none";
 
-function loadOdds(sport) {
-  fetch(`/api/odds?sport=${sport}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      // render odds here
-    });
-}
+  // Show main app
+  app.setAttribute("aria-hidden", "false");
+});
