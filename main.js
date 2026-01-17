@@ -1,5 +1,7 @@
 const overlay = document.getElementById("overlay");
 const panel = document.getElementById("oddsPanel");
+const sportSelect = document.getElementById("sportSelect");
+const oddsContainer = document.getElementById("oddsContainer");
 
 overlay.addEventListener("click", start);
 window.addEventListener("keydown", e => {
@@ -15,17 +17,19 @@ function start() {
 
 async function loadOdds() {
   try {
-    const res = await fetch("/api/odds?sport=basketball_nba&markets=h2h,spreads,totals");
+    const sport = sportSelect?.value || "basketball_nba";
+    const res = await fetch(`/api/odds?sport=${sport}&markets=h2h,spreads,totals`);
     const games = await res.json();
     render(games);
   } catch (err) {
-    panel.innerHTML = `<div class="title">ODDS ERROR</div>`;
+    oddsContainer.innerHTML = `<div class="title">ODDS ERROR</div>`;
     console.error(err);
   }
 }
 
 function render(games) {
-  panel.innerHTML = `<div class="title">NBA LIVE ODDS</div>`;
+  const label = sportSelect?.selectedOptions?.[0]?.text || "LIVE ODDS";
+  oddsContainer.innerHTML = `<div class="title">${label} LIVE ODDS</div>`;
 
   games.forEach(game => {
     const home = game.home_team;
@@ -45,7 +49,7 @@ function render(games) {
     const total =
       totals?.outcomes?.map(o => `${o.name} ${o.point}: ${o.price}`).join(" | ") || "--";
 
-    panel.innerHTML += `
+    oddsContainer.innerHTML += `
       <div class="game">
         <div><strong>${away}</strong> @ <strong>${home}</strong></div>
         <div class="line">Moneyline: ${money}</div>
@@ -53,5 +57,12 @@ function render(games) {
         <div class="line">Total: ${total}</div>
       </div>
     `;
+  });
+}
+
+if (sportSelect) {
+  sportSelect.addEventListener("change", () => {
+    if (panel.style.display !== "block") return;
+    loadOdds();
   });
 }
