@@ -18,6 +18,7 @@
       <div class="nav-inner">
         <a href="#home">Home</a>
         <a href="#picks">Picks</a>
+        <a href="#odds">Odds</a>
         <a href="#sites">Top Sites</a>
         <a href="#learning">Learning</a>
         <a href="#notes">Notes</a>
@@ -150,6 +151,19 @@
     </div>
   </section>
 
+  <section id="odds" class="section">
+    <div class="panel odds-panel">
+      <div class="section-head">
+        <h2>Live Odds</h2>
+        <p>Click to load current lines from your API.</p>
+      </div>
+      <div class="odds-overlay" id="overlay">
+        <button class="odds-btn" type="button">Load Odds</button>
+      </div>
+      <div class="odds-body" id="oddsPanel" aria-live="polite"></div>
+    </div>
+  </section>
+
   <section id="sites" class="section">
     <div class="panel">
       <div class="section-head">
@@ -268,5 +282,6 @@
       app.setAttribute("aria-hidden", "false");
     });
   </script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -31,7 +31,7 @@ body.is-entered{
   padding-top:var(--nav-h);
   background-image:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("pg2.png");
+    url("PG2.png");
 }
 
 .navbar{
@@ -509,6 +509,58 @@ p{
   border:1px solid var(--border);
   border-radius:12px;
   background:rgba(0,0,0,.45);
+}
+
+.odds-panel{
+  position:relative;
+  min-height:220px;
+}
+
+.odds-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.55);
+}
+
+.odds-btn{
+  border:1px solid rgba(108,229,216,.5);
+  background:rgba(0,0,0,.45);
+  color:var(--text);
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+.odds-body{
+  display:none;
+}
+
+.odds-body .title{
+  font-family:"Oswald","Franklin Gothic Medium","Impact",sans-serif;
+  font-size:18px;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.odds-body .game{
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:rgba(0,0,0,.45);
+  display:grid;
+  gap:6px;
+  margin-bottom:10px;
+}
+
+.odds-body .line{
+  font-size:12px;
+  color:var(--muted);
 }
 
 @media (max-width:640px){

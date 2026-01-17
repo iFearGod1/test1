@@ -37,13 +37,13 @@ function render(games) {
     const totals = bm?.markets?.find(m => m.key === "totals");
 
     const money =
-      h2h?.outcomes?.map(o => `${o.name}: ${o.price}`).join(" | ") || "—";
+      h2h?.outcomes?.map(o => `${o.name}: ${o.price}`).join(" | ") || "--";
 
     const spread =
-      spreads?.outcomes?.map(o => `${o.name} ${o.point}: ${o.price}`).join(" | ") || "—";
+      spreads?.outcomes?.map(o => `${o.name} ${o.point}: ${o.price}`).join(" | ") || "--";
 
     const total =
-      totals?.outcomes?.map(o => `${o.name} ${o.point}: ${o.price}`).join(" | ") || "—";
+      totals?.outcomes?.map(o => `${o.name} ${o.point}: ${o.price}`).join(" | ") || "--";
 
     panel.innerHTML += `
       <div class="game">
