@@ -16,9 +16,7 @@
   <div class="app" id="app" aria-hidden="true">
     <nav class="navbar">
       <div class="nav-inner">
-        <a href="#home">Home</a>
-        <a href="#picks">Picks</a>
-        <a href="#odds">Odds</a>
+        <a href="#home">Home</a><a href="#odds">Odds</a>
         <a href="#sites">Top Sites</a>
         <a href="#learning">Learning</a>
         <a href="#notes">Notes</a>
@@ -38,39 +36,12 @@
       </div>
     </section>
 
-  <section id="picks" class="section">
-    <div class="panel">
-      <div class="subhead">
-        <h3>Main Event Games</h3>
-        <p>Highlight matchups for today.</p>
-      </div>
-      <div class="games-grid">
-        <div class="game-card">
-          <span class="game-title">Lakers vs Warriors</span>
-          <span class="game-meta">NBA • 10:00 PM</span>
-        </div>
-        <div class="game-card">
-          <span class="game-title">Yankees vs Red Sox</span>
-          <span class="game-meta">MLB • 7:05 PM</span>
-        </div>
-        <div class="game-card">
-          <span class="game-title">Cowboys vs Eagles</span>
-          <span class="game-meta">NFL • 8:20 PM</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="odds" class="section">
     <div class="panel odds-panel">
       <div class="section-head">
         <h2>Live Odds</h2>
         <p>Click to load current lines from your API.</p>
-      </div>
-      <div class="odds-overlay" id="overlay">
-        <button class="odds-btn" type="button">Load Odds</button>
-      </div>
-      <div class="odds-body" id="oddsPanel" aria-live="polite">
+      </div><div class="odds-body" id="oddsPanel" aria-live="polite">
         <select id="sportSelect">
           <option value="basketball_nba">NBA</option>
           <option value="americanfootball_nfl">NFL</option>
@@ -205,3 +176,4 @@
   <script src="main.js"></script>
 </body>
 </html>
+
