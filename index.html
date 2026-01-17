@@ -16,7 +16,8 @@
   <div class="app" id="app" aria-hidden="true">
     <nav class="navbar">
       <div class="nav-inner">
-        <a href="#home">Home</a><a href="#odds">Odds</a>
+        <a href="#home">Home</a>
+        <a href="#odds">Odds</a>
         <a href="#sites">Top Sites</a>
         <a href="#learning">Learning</a>
         <a href="#notes">Notes</a>
@@ -36,24 +37,25 @@
       </div>
     </section>
 
-  <section id="odds" class="section">
-    <div class="panel odds-panel">
-      <div class="section-head">
-        <h2>Live Odds</h2>
-        <p>Click to load current lines from your API.</p>
-      </div><div class="odds-body" id="oddsPanel" aria-live="polite">
-        <select id="sportSelect">
-          <option value="basketball_nba">NBA</option>
-          <option value="americanfootball_nfl">NFL</option>
-          <option value="americanfootball_ncaaf">NCAAF</option>
-          <option value="baseball_mlb">MLB</option>
-          <option value="icehockey_nhl">NHL</option>
-          <option value="mma_mixed">UFC</option>
-        </select>
-        <div id="oddsContainer"></div>
+    <section id="odds" class="section">
+      <div class="panel odds-panel">
+        <div class="section-head">
+          <h2>Live Odds</h2>
+          <p>Select a sport to load current lines from your API.</p>
+        </div>
+        <div class="odds-body" id="oddsPanel" aria-live="polite">
+          <select id="sportSelect">
+            <option value="basketball_nba">NBA</option>
+            <option value="americanfootball_nfl">NFL</option>
+            <option value="americanfootball_ncaaf">NCAAF</option>
+            <option value="baseball_mlb">MLB</option>
+            <option value="icehockey_nhl">NHL</option>
+            <option value="mma_mixed">UFC</option>
+          </select>
+          <div id="oddsContainer"></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section id="sites" class="section">
     <div class="panel">
