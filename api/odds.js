@@ -1,20 +1,37 @@
-export default async function handler(req, res) {
-  const key = process.env.ODDS_API_KEY;
+const sports = [
+  "basketball_nba",
+  "americanfootball_nfl",
+  "baseball_mlb",
+  "icehockey_nhl",
+  "mma_mixed"
+];
 
-  const sport = req.query.sport || "basketball_nba";
-  const markets = req.query.markets || "h2h,spreads,totals";
-  const regions = req.query.regions || "us";
+async function loadAllOdds() {
+  const container = document.getElementById("oddsContainer");
+  container.innerHTML = "";
 
-  const url =
-    `https://api.the-odds-api.com/v4/sports/${sport}/odds` +
-    `?apiKey=${key}` +
-    `&regions=${regions}` +
-    `&markets=${markets}` +
-    `&oddsFormat=american`;
+  for (const sport of sports) {
+    const res = await fetch(`/api/odds?sport=${sport}`);
+    const data = await res.json();
 
-  const r = await fetch(url);
-  const text = await r.text();
+    if (!data || data.length === 0) continue;
 
-  res.setHeader("Cache-Control", "s-maxage=300, stale-while-revalidate=600");
-  res.status(r.status).send(text);
+    const title = document.createElement("h2");
+    title.textContent = sport.replaceAll("_", " ").toUpperCase();
+    container.appendChild(title);
+
+    data.forEach(game => {
+      const div = document.createElement("div");
+      div.className = "odds-card";
+
+      div.innerHTML = `
+        <strong>${game.home_team} vs ${game.away_team}</strong><br>
+        ${new Date(game.commence_time).toLocaleString()}
+      `;
+
+      container.appendChild(div);
+    });
+  }
 }
+
+loadAllOdds();
