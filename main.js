@@ -10,4 +10,5 @@ enterBtn.addEventListener("click", () => {
 
   // Show main app
   app.setAttribute("aria-hidden", "false");
+  document.body.classList.add("is-entered");
 });
