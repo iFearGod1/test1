@@ -3,6 +3,11 @@
 // IMPORTANT: Put your key in an environment variable named ODDS_API_KEY (NOT in this file).
 
 export default async function handler(req, res) {
+  // Temporarily disabled while updates are in progress.
+  return res.status(503).json({
+    error: "Odds API temporarily disabled"
+  });
+
   // Only allow GET
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
